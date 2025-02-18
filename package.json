@@ -2,8 +2,12 @@
   "name": "it-35-lab",
   "private": true,
   "version": "0.0.1",
-  "type": "module",
+  "type": "module", 
+  "homepage" : "https://github.com/Danmark12/it35-lab/",
+    
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
