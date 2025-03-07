@@ -66,10 +66,10 @@ import { logoFacebook, logoInstagram, logoIonic, logoTwitter } from 'ionicons/ic
           
             <IonTitle>Login</IonTitle>
           <IonItem>
-        <IonInput label="Email input" type="email" placeholder="email@domain.com"></IonInput>
+        <IonInput label="Email input" type="email" placeholder="Jologs@codes"></IonInput>
       </IonItem>
 
-        <IonInput type="password" label="Password" value="NeverGonnaGiveYouUp">
+        <IonInput type="password" label="Password" value="Jologscodes">
       <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
     </IonInput>
             <IonButton onClick={() => doLogin()} expand="full">

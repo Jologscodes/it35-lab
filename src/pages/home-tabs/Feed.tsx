@@ -31,52 +31,52 @@ import {
         <IonCardSubtitle>Scripture Spotlight</IonCardSubtitle>
       </IonCardHeader>
 
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+      <IonCardContent></IonCardContent>
     </IonCard>
     <IonCard>
       <img alt="Silhouette of mountains" src="https://dailyverses.net/images/en/niv/proverbs-16-3-2.jpg" />
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+        <IonCardTitle>proverbs-16-3-2</IonCardTitle>
+        <IonCardSubtitle></IonCardSubtitle>
       </IonCardHeader>
 
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+      <IonCardContent></IonCardContent>
     </IonCard>
     <IonCard>
       <img alt="Silhouette of mountains" src="https://dailyverses.net/images/en/niv/philippians-4-6-7-3.jpg" />
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+        <IonCardTitle>philippians-4-6-7-3</IonCardTitle>
+        <IonCardSubtitle></IonCardSubtitle>
       </IonCardHeader>
 
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+      <IonCardContent></IonCardContent>
     </IonCard>
     <IonCard>
       <img alt="Silhouette of mountains" src="https://dailyverses.net/images/en/niv/isaiah-40-31-2.jpg" />
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+        <IonCardTitle>isaiah-40-31-2</IonCardTitle>
+        <IonCardSubtitle></IonCardSubtitle>
       </IonCardHeader>
 
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+      <IonCardContent></IonCardContent>
     </IonCard>
     <IonCard>
       <img alt="Silhouette of mountains" src="https://dailyverses.net/images/en/niv/isaiah-41-10-2.jpg" />
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+        <IonCardTitle>isaiah-41-10-2</IonCardTitle>
+        <IonCardSubtitle></IonCardSubtitle>
       </IonCardHeader>
 
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+      <IonCardContent></IonCardContent>
     </IonCard>
     <IonCard>
       <img alt="Silhouette of mountains" src="https://dailyverses.net/images/en/niv/deuteronomy-6-6-7-4.jpg" />
       <IonCardHeader>
-        <IonCardTitle>Card Title</IonCardTitle>
-        <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
+        <IonCardTitle>deuteronomy-6-6-7-4</IonCardTitle>
+        <IonCardSubtitle></IonCardSubtitle>
       </IonCardHeader>
 
-      <IonCardContent>Here's a small text description for the card content. Nothing more, nothing less.</IonCardContent>
+      <IonCardContent></IonCardContent>
     </IonCard>
 
 
