@@ -1,9 +1,13 @@
 
 import { 
+  IonAvatar,
     IonButton,
     IonButtons,
       IonContent, 
       IonHeader, 
+      IonInput, 
+      IonInputPasswordToggle, 
+      IonItem, 
       IonMenuButton, 
       IonPage, 
       IonTitle, 
@@ -94,11 +98,52 @@ import { useState } from 'react';
             }`
           }
         </style>
+        <div className="login-box">
+          <IonAvatar className="avatar">
+            <img 
+              alt="User Avatar" 
+              src="https://scontent.fcgy1-3.fna.fbcdn.net/v/t39.30808-1/482960212_1178171297241212_1902480851555599092_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeF_6gU2bXql48gU8UAqKe-sKBBW1pU6VfwoEFbWlTpV_JUuDAXHuNc0eoQ6WiYKPUtrHRAqbPOAoXdtuR80coDM&_nc_ohc=ctQ-a1bN3wcQ7kNvgH6Tv6m&_nc_oc=Adg4coAWfilOTJTnsTFbRRdNKB4Ha7caLk-3GGKHIA4OfOrAU-4y7AWRzzEJq3itzNQ&_nc_zt=24&_nc_ht=scontent.fcgy1-3.fna&_nc_gid=fYAr391VP_5zOBAYyLYejQ&oh=00_AYG8rnPA5ZRWEiNpeSU0e_gXUqnyr4XiooJUKRv4HCUm7g&oe=67DBF69E" 
+              style={{ width: '100%', height: '100%' }} 
+            />
+          </IonAvatar>
+
+          <h1 style={{ color: 'white', fontWeight: 'bold', marginBottom: '20px' }}>USER LOGIN</h1>
+
+          <IonItem style={{ width: '100%', marginBottom: '10px', borderRadius: '10px', overflow: 'hidden' }}>
+            <IonInput 
+              label="Email" 
+              type="email" 
+              placeholder="Enter your email" 
+              value={email} 
+              onIonChange={(e) => setEmail(e.detail.value!)}
+            />
+          </IonItem>
+
+          <IonItem style={{ width: '100%', marginBottom: '20px', borderRadius: '10px', overflow: 'hidden' }}>
+            <IonInput 
+              type="password" 
+              label="Password"
+              value={password} 
+              onIonChange={(e) => setPassword(e.detail.value!)}
+            >
+              <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+            </IonInput>
+          </IonItem>
+          
+          <IonButton onClick={doLogin} expand="full" style={{ width: '100%', marginBottom: '10px' }}>
+            LOGIN
+          </IonButton>
+          <IonButton onClick={doSignup} expand="full" color="secondary" style={{ width: '100%' }}>
+            SIGNUP
+          </IonButton>
+        </div>
       </IonContent>
-      </IonPage>
-          {
+    </IonPage>
+  );
+};
+
+export default Login;
             
-    );
-  };
   
-  export default Login;
+  
+ 
