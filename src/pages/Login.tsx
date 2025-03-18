@@ -18,8 +18,17 @@ import { useState } from 'react';
     const [password, setPassword] = useState('');
   
     const doLogin = () => {
-        navigation.push('/it35-lab/app','forward','replace');
-    }
+      if (!email || !password) {
+        alert('Please enter your email and password.');
+        return;
+      }
+      navigation.push('/it35-lab/app', 'forward', 'replace'); 
+    };
+  
+    const doSignup = () => {
+      navigation.push('/Register', 'forward', 'replace'); 
+    };
+  
     return (
       <IonPage>
         <IonHeader>
