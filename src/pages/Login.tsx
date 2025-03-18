@@ -10,9 +10,12 @@ import {
       IonToolbar, 
       useIonRouter
   } from '@ionic/react';
+import { useState } from 'react';
   
   const Login: React.FC = () => {
     const navigation = useIonRouter();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
   
     const doLogin = () => {
         navigation.push('/it35-lab/app','forward','replace');
