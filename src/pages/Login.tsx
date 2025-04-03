@@ -52,7 +52,7 @@ const Login: React.FC = () => {
               overflow: 'hidden' 
             }}>
             <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Bufo_bufo_1.jpg" 
+              src="https://c.tenor.com/IVO1qA42kh0AAAAC/crazy-pepe-the-frog.gif" 
               alt="Frog"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
             />
