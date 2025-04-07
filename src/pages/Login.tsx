@@ -3,14 +3,12 @@ import {
   IonAvatar,
   IonButton,
   IonContent,
-  IonIcon,
   IonInput,
   IonInputPasswordToggle,
   IonPage,
   IonToast,
   useIonRouter
 } from '@ionic/react';
-import { happyOutline } from 'ionicons/icons';
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
@@ -54,11 +52,17 @@ const Login: React.FC = () => {
               height: '150px',
               borderRadius: '50%',
               overflow: 'hidden'
-            }}>
-            <IonIcon
-              icon={happyOutline}
-              color='primary'
-              style={{ fontSize: '120px', color: '#6c757d' }}
+            }}
+          >
+            {/* Replace IonIcon with an <img> tag to display the frog GIF */}
+            <img
+              src="https://i.pinimg.com/originals/cc/9d/d3/cc9dd3a99a069fa5a2548d8f57f4d5d8.gif" 
+              alt="Frog"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
             />
           </IonAvatar>
           <h1 style={{
