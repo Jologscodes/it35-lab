@@ -109,8 +109,8 @@ const FeedContainer = () => {
   };
 
   return (
-   <>
-      
+    <>
+
         <IonContent>
           {user ? (
             <>
@@ -200,7 +200,7 @@ const FeedContainer = () => {
           message="Post updated successfully!"
           buttons={['OK']}
         />
-     </>
+    </>
   );
 };
 
