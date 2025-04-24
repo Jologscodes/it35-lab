@@ -40,7 +40,7 @@ const Login: React.FC = () => {
     <IonPage>
       <IonContent className='ion-padding' style={{ backgroundColor: '#ff6f00' }}> {/* Red/Orange container */}
         <IonGrid style={{ height: '100vh', paddingTop: '10%' }}>
-          <IonRow justify="center" align="center">
+          <IonRow style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {/* Avatar Section */}
             <IonCol size="12" sizeMd="4" style={{ display: 'flex', justifyContent: 'center' }}>
               <IonAvatar
