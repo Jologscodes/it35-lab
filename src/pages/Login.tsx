@@ -7,7 +7,10 @@ import {
   IonInputPasswordToggle,
   IonPage,
   IonToast,
-  useIonRouter
+  useIonRouter,
+  IonGrid,
+  IonRow,
+  IonCol
 } from '@ionic/react';
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
@@ -36,66 +39,68 @@ const Login: React.FC = () => {
   return (
     <IonPage>
       <IonContent className='ion-padding'>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginTop: '19%'
-        }}>
-          <IonAvatar
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '150px',
-              height: '150px',
-              borderRadius: '50%',
-              overflow: 'hidden'
-            }}
-          >
-            {/* Replace IonIcon with an <img> tag to display the frog GIF */}
-            <img
-              src="https://i.pinimg.com/originals/cc/9d/d3/cc9dd3a99a069fa5a2548d8f57f4d5d8.gif" 
-              alt="Frog"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
-            />
-          </IonAvatar>
-          <h1 style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>Welcome!</h1>
-          <IonInput
-            label="Email"
-            labelPlacement="floating"
-            fill="outline"
-            type="email"
-            placeholder="Enter Email"
-            value={email}
-            onIonChange={e => setEmail(e.detail.value!)}
-          />
-          <IonInput style={{
-            marginTop: '10px',
-          }}
-            fill="outline"
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onIonChange={e => setPassword(e.detail.value!)}
-          ><IonInputPasswordToggle slot="end"></IonInputPasswordToggle></IonInput>
-        </div>
-        <IonButton onClick={doLogin} expand="full" shape='round'>
-          Login
-        </IonButton>
+        <IonGrid style={{ height: '100vh', paddingTop: '10%' }}>
+          <IonRow justify="center" align="center">
+            {/* Avatar Section */}
+            <IonCol size="12" sizeMd="4" style={{ display: 'flex', justifyContent: 'center' }}>
+              <IonAvatar
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '150px',
+                  height: '150px',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                }}
+              >
+                {/* Replace IonIcon with an <img> tag to display the frog GIF */}
+                <img
+                  src="https://i.pinimg.com/originals/cc/9d/d3/cc9dd3a99a069fa5a2548d8f57f4d5d8.gif"
+                  alt="Frog"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                />
+              </IonAvatar>
+            </IonCol>
 
-        <IonButton routerLink="/it35-lab/register" expand="full" fill="clear" shape='round'>
-          Don't have an account? Register here
-        </IonButton>
+            {/* Form Section */}
+            <IonCol size="12" sizeMd="6">
+              <h1 style={{ textAlign: 'center' }}>Welcome!</h1>
+              <IonInput
+                label="Email"
+                labelPlacement="floating"
+                fill="outline"
+                type="email"
+                placeholder="Enter Email"
+                value={email}
+                onIonChange={(e) => setEmail(e.detail.value!)}
+                style={{ marginBottom: '10px' }}
+              />
+              <IonInput
+                fill="outline"
+                type="password"
+                placeholder="Enter Password"
+                value={password}
+                onIonChange={(e) => setPassword(e.detail.value!)}
+                style={{ marginBottom: '20px' }}
+              >
+                <IonInputPasswordToggle slot="end" />
+              </IonInput>
+
+              <IonButton onClick={doLogin} expand="full" shape="round" style={{ marginBottom: '10px' }}>
+                Login
+              </IonButton>
+
+              <IonButton routerLink="/it35-lab/register" expand="full" fill="clear" shape="round">
+                Don't have an account? Register here
+              </IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
 
         {/* IonAlert for displaying login errors */}
         <IonAlert
