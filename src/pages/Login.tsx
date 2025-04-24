@@ -38,7 +38,7 @@ const Login: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent className='ion-padding'>
+      <IonContent className='ion-padding' style={{ backgroundColor: '#ff6f00' }}> {/* Red/Orange container */}
         <IonGrid style={{ height: '100vh', paddingTop: '10%' }}>
           <IonRow justify="center" align="center">
             {/* Avatar Section */}
@@ -48,13 +48,12 @@ const Login: React.FC = () => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  width: '150px',
-                  height: '150px',
+                  width: '200px', // Bigger
+                  height: '200px', // Bigger
                   borderRadius: '50%',
                   overflow: 'hidden',
                 }}
               >
-                {/* Replace IonIcon with an <img> tag to display the frog GIF */}
                 <img
                   src="https://i.pinimg.com/originals/cc/9d/d3/cc9dd3a99a069fa5a2548d8f57f4d5d8.gif"
                   alt="Frog"
@@ -67,9 +66,9 @@ const Login: React.FC = () => {
               </IonAvatar>
             </IonCol>
 
-            {/* Form Section */}
-            <IonCol size="12" sizeMd="6">
-              <h1 style={{ textAlign: 'center' }}>Welcome!</h1>
+            {/* Form Section with floating animation */}
+            <IonCol size="12" sizeMd="6" className="floating-container">
+              <h1 className="jollibee-logo">JolliLogin 🍔</h1>
               <IonInput
                 label="Email"
                 labelPlacement="floating"
@@ -91,18 +90,37 @@ const Login: React.FC = () => {
                 <IonInputPasswordToggle slot="end" />
               </IonInput>
 
-              <IonButton onClick={doLogin} expand="full" shape="round" style={{ marginBottom: '10px' }}>
+              <IonButton
+                onClick={doLogin}
+                expand="full"
+                shape="round"
+                style={{
+                  marginBottom: '10px',
+                  backgroundColor: '#ff6f00', // Red/Orange background
+                  color: '#fff', // White text for contrast
+                  border: '2px solid #ffd700', // Yellow border for emphasis
+                }}
+              >
                 Login
               </IonButton>
 
-              <IonButton routerLink="/it35-lab/register" expand="full" fill="clear" shape="round">
-                Don't have an account? Register here
+              <IonButton
+                routerLink="/it35-lab/register"
+                expand="full"
+                fill="clear"
+                shape="round"
+                style={{
+                  border: '2px solid #ffd700', // Yellow border for the second button
+                  color: '#ffd700', // Yellow text
+                }}
+              >
+                Don't have an account? SIGN UP HERE
               </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>
 
-        {/* IonAlert for displaying login errors */}
+        {/* Alert for login errors */}
         <IonAlert
           isOpen={showAlert}
           onDidDismiss={() => setShowAlert(false)}
@@ -111,7 +129,7 @@ const Login: React.FC = () => {
           buttons={['OK']}
         />
 
-        {/* IonToast for success message */}
+        {/* Toast for success */}
         <IonToast
           isOpen={showToast}
           onDidDismiss={() => setShowToast(false)}
@@ -121,6 +139,32 @@ const Login: React.FC = () => {
           color="primary"
         />
       </IonContent>
+
+      {/* Floating Animation and Logo Style */}
+      <style>
+        {`
+          @keyframes floatAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+          }
+
+          .floating-container {
+            animation: floatAnimation 3s ease-in-out infinite;
+          }
+
+          .jollibee-logo {
+            font-size: 4rem; /* BIGGER! */
+            font-weight: bold;
+            text-align: center;
+            color: #fff; /* White text for better contrast */
+            font-family: 'Comic Sans MS', 'Fredoka', 'Segoe UI', sans-serif;
+            text-shadow: 3px 3px #ffd700; /* Yellow pop with more depth */
+            letter-spacing: 1.5px;
+            margin-bottom: 30px;
+          }
+        `}
+      </style>
     </IonPage>
   );
 };
