@@ -56,13 +56,15 @@ const Register: React.FC = () => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const { error: insertError } = await supabase.from('users').insert([{
-      username,
-      user_email: email,
-      user_firstname: firstName,
-      user_lastname: lastName,
-      user_password: hashedPassword,
-    }]);
+    const { error: insertError } = await supabase.from('users').insert([
+      {
+        username,
+        user_email: email,
+        user_firstname: firstName,
+        user_lastname: lastName,
+        user_password: hashedPassword,
+      }
+    ]);
 
     if (insertError) {
       alert('Failed to save user data: ' + insertError.message);
@@ -72,19 +74,14 @@ const Register: React.FC = () => {
     setShowSuccessModal(true);
   };
 
-  const InputField = ({
-    label,
-    value,
-    setValue,
-    type,
-    placeholder
-  }: {
+  // Corrected InputField component
+  const InputField: React.FC<{
     label: string;
     value: string;
     setValue: React.Dispatch<React.SetStateAction<string>>;
-    type: string;
+    type: 'text' | 'email' | 'password' | 'number'; // Specify types allowed
     placeholder: string;
-  }) => (
+  }> = ({ label, value, setValue, type, placeholder }) => (
     <IonInput
       label={label}
       labelPlacement="stacked"
@@ -117,7 +114,6 @@ const Register: React.FC = () => {
           <InputField label="Last Name" value={lastName} setValue={setLastName} type="text" placeholder="Enter your last name" />
           <InputField label="Email" value={email} setValue={setEmail} type="email" placeholder="youremail@nbsc.edu.ph" />
 
-          {/* Password Input */}
           <IonLabel>Password</IonLabel>
           <IonInput
             type="password"
