@@ -92,7 +92,7 @@ const Register: React.FC = () => {
       type={type}
       placeholder={placeholder}
       value={value}
-      onIonInput={e => setValue((e.target as HTMLInputElement).value)}
+      onIonInput={(e) => setValue(e.detail.value!)}
       style={{ marginTop: '15px' }}
     />
   );
@@ -124,7 +124,7 @@ const Register: React.FC = () => {
             fill="outline"
             placeholder="Enter password"
             value={password}
-            onIonInput={e => setPassword((e.target as HTMLInputElement).value)}
+            onIonInput={(e) => setPassword(e.detail.value!)}
             style={{ marginTop: '10px' }}
           />
 
@@ -134,7 +134,7 @@ const Register: React.FC = () => {
             fill="outline"
             placeholder="Confirm password"
             value={confirmPassword}
-            onIonInput={e => setConfirmPassword((e.target as HTMLInputElement).value)}
+            onIonInput={(e) => setConfirmPassword(e.detail.value!)}
             style={{ marginTop: '10px' }}
           />
 
