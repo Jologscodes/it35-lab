@@ -1,0 +1,46 @@
+/* Glow effect for buttons */
+.glow-button {
+    background-color: #3880ff;
+    color: white;
+    box-shadow: 0 0 10px #3880ff, 0 0 20px #3880ff;
+    transition: 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 20px #3880ff, 0 0 40px #3880ff;
+}
+
+/* Clear button with glow */
+.glow-clear-button {
+    color: #3880ff;
+    transition: 0.3s ease-in-out;
+}
+
+.glow-clear-button:hover {
+    text-shadow: 0 0 10px #3880ff;
+}
+
+/* Animation for container */
+.animated-container {
+    position: relative;
+    z-index: 1;
+    animation: floatAnimation 6s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Float and move slowly */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(5px);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
