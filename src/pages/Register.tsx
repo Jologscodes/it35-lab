@@ -101,7 +101,7 @@ const Register: React.FC = () => {
           {/* Logo GIF */}
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
             <img
-              src="https://www.gifcen.com/wp-content/uploads/2022/03/pepe-the-frog-gif-1.gif"
+              src="https://usagif.com/wp-content/uploads/gify/excited-frog-meme-usagif.gif"
               alt="Logo"
               style={{ width: '120px', height: '120px', objectFit: 'contain' }}
             />
