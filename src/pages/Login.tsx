@@ -38,7 +38,7 @@ const Login: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent className='ion-padding' style={{ backgroundColor: '#ff6f00' }}> {/* Red/Orange container */}
+      <IonContent className='ion-padding glowing-background'>
         <IonGrid style={{ height: '100vh', paddingTop: '10%' }}>
           <IonRow style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {/* Avatar Section */}
@@ -48,8 +48,8 @@ const Login: React.FC = () => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  width: '200px', // Bigger
-                  height: '200px', // Bigger
+                  width: '200px',
+                  height: '200px',
                   borderRadius: '50%',
                   overflow: 'hidden',
                 }}
@@ -66,9 +66,9 @@ const Login: React.FC = () => {
               </IonAvatar>
             </IonCol>
 
-            {/* Form Section with floating animation */}
+            {/* Form Section */}
             <IonCol size="12" sizeMd="6" className="floating-container">
-              <h1 className="jollibee-logo">JolliLogin 🍔</h1>
+              <h1 className="jollibee-logo">WELCOME MA FRIEND! 🍔</h1>
               <IonInput
                 label="Email"
                 labelPlacement="floating"
@@ -94,12 +94,7 @@ const Login: React.FC = () => {
                 onClick={doLogin}
                 expand="full"
                 shape="round"
-                style={{
-                  marginBottom: '10px',
-                  backgroundColor: '#ff6f00', // Red/Orange background
-                  color: '#fff', // White text for contrast
-                  border: '2px solid #ffd700', // Yellow border for emphasis
-                }}
+                className="glow-button"
               >
                 Login
               </IonButton>
@@ -109,10 +104,7 @@ const Login: React.FC = () => {
                 expand="full"
                 fill="clear"
                 shape="round"
-                style={{
-                  border: '2px solid #ffd700', // Yellow border for the second button
-                  color: '#ffd700', // Yellow text
-                }}
+                className="glow-button-outline"
               >
                 Don't have an account? SIGN UP HERE
               </IonButton>
@@ -140,7 +132,6 @@ const Login: React.FC = () => {
         />
       </IonContent>
 
-      {/* Floating Animation and Logo Style */}
       <style>
         {`
           @keyframes floatAnimation {
@@ -154,14 +145,45 @@ const Login: React.FC = () => {
           }
 
           .jollibee-logo {
-            font-size: 4rem; /* BIGGER! */
+            font-size: 4rem;
             font-weight: bold;
             text-align: center;
-            color: #fff; /* White text for better contrast */
+            color: #fff;
             font-family: 'Comic Sans MS', 'Fredoka', 'Segoe UI', sans-serif;
-            text-shadow: 3px 3px #ffd700; /* Yellow pop with more depth */
+            text-shadow: 3px 3px #ffd700;
             letter-spacing: 1.5px;
             margin-bottom: 30px;
+          }
+
+          .glowing-background {
+            background-color: #1e1e1e; /* Smooth dark tone */
+            color: #ffffff;
+            box-shadow: inset 0 0 15px #ff9800;
+          }
+
+          .glow-button {
+            background-color: #ff9800; /* Softer orange */
+            color: #fff;
+            border: none;
+            box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+            transition: 0.3s;
+          }
+
+          .glow-button:hover {
+            box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+          }
+
+          .glow-button-outline {
+            border: 2px solid #ff9800;
+            color: #ff9800;
+            background: transparent;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.4);
+            transition: 0.3s;
+          }
+
+          .glow-button-outline:hover {
+            background-color: rgba(255, 152, 0, 0.1);
+            box-shadow: 0 0 20px rgba(255, 152, 0, 0.7);
           }
         `}
       </style>
